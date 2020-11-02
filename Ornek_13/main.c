@@ -5,12 +5,12 @@ int main()
 {
     float fah,kel,cel,rea,ran;
     char secim;
-    printf("Celcius turunden girdiginiz sicaklik degerini diger turlere cevirme programina hos geldiniz!\n");
-    printf("Oncelikle Celcius Turunden Derecenin Degerini giriniz:\t");
+    printf("Welcome to temporary conversion of celcius to the others!\n");
+    printf("Firstly, enter the value of celcius degree:\t");
     scanf("%f", &cel);
-    printf("Reamour=1,Kelvin=2,Fahrenheit=3,Rankine=4,hepsi=5\n");
-    printf("Hangi ture donusturmek istiyorsunuz:\t");
-    scanf("%s", &secim);
+    printf("Reamour=1,Kelvin=2,Fahrenheit=3,Rankine=4,All=5\n");
+    printf("which one do you want to convert it to:\t");
+    scanf(" %c", &secim);
     switch(secim){
     case '1':
         rea =  cel * 0.8;
@@ -37,7 +37,7 @@ int main()
         printf("= %f Fahrenheit = %f Rankine",fah,ran);
         break;
     default:
-        printf("Yanlis tuslama yaptiniz!!!!");
+        printf("You push wrong number!!!!");
     }
 
 
