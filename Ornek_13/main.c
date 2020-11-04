@@ -5,7 +5,7 @@ int main()
 {
     float fah,kel,cel,rea,ran;
     char secim;
-    printf("Welcome to temporary conversion of celcius to the others!\n");
+    printf("Welcome to temporary conversion Project of celcius to the others!\n");
     printf("Firstly, enter the value of celcius degree:\t");
     scanf("%f", &cel);
     printf("Reamour=1,Kelvin=2,Fahrenheit=3,Rankine=4,All=5\n");
