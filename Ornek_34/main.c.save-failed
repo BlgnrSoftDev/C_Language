@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char Alfabe[26];
+    char ilk,son,sayac=1;
+    for(ilk='a',son='z';ilk<=son;ilk++){
+        alfabe[sayac]=ilk;
+        sayac++;
+    }
+    printf("%c",alfabe[26]);
+    return 0;
+}
