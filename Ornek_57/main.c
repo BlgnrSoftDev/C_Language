@@ -11,7 +11,7 @@ int main()
     int konum[20],bosluk[30] ;
     printf("girilen metnin kac harften olustugunu bulma programi\n\n\n");
 
-    printf("Sayilacak yeri belirlemek için '//' yaziniz \n") ;
+    printf("Sayilacak yeri belirlemek icin '//' yaziniz \n") ;
 tekrar:
     printf("Lutfen metni giriniz:\t") ;
     gets(metin) ;
