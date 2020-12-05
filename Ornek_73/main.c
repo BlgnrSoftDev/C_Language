@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// fonksiyon kullanarak temel aritmeik islemler yapma ptogrami
 int Toplam(int, int);
 int Toplam2(int);
 unsigned long long Carpim(int);

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+// Iki boyutlu bir char dizisinin icinde tek boyutlu char diizisini aramak ve eger varsa konumlarini cikti olarak yazdirma programi
 void ayristirici(int a,int b,char c[]) ;
 int main(){
 

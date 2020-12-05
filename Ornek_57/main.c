@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+// Girilen metnin '//' isareti girilene kadar tum harfleri sayma yani kac harften olsutugunu bulma programÄ±
 
 int main()
 {
@@ -32,7 +32,7 @@ tekrar:
 
     if(j != 0){
     for(k=0;k < 20;k++){
-        if(konum[k] + 1 == konum[k+1] ){       // '/' isaretinin ard arda yazıldığını bulmak için..
+        if(konum[k] + 1 == konum[k+1] ){       // '/' isaretinin ard arda yazÃ½ldÃ½Ã°Ã½nÃ½ bulmak iÃ§in..
             printf("\nYazdiginiz cumle %d kelimeden olusmaktadir..",konum[k]-s) ;
             break ;
         }

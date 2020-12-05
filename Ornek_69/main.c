@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// A harfi basma programiii  (onemsiz ornek)
 int main()
 {
     int l = 0, p = 9,g = 9 ;

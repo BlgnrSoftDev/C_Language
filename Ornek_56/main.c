@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+//girilen cumlenin kelimelerinin ilk harfini buyuk yapma programi
 int main()
 {
 
     char cumle[100] ;
     int bosluk[100],i,sayac,j,x ;
 
-    printf("girilen cumlenin kelimelerin ilk harfini buyuk yapma programý\n\n\n\n");
+    printf("girilen cumlenin kelimelerin ilk harfini buyuk yapma programi\n\n\n\n");
     printf("Lutfen cumleyi giriniz:\t") ;
     gets(cumle) ;
 

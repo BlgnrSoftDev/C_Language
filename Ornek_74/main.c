@@ -4,7 +4,7 @@
 
 #include <math.h>
 
-
+// 1 ile 100 arasi armstrong sayilarini bulma programi...........
 
 int main()
 

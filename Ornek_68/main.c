@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// fonksiyonlarla faktoriyel hesaplama programi..
 int faktoriyel(int a){
     int hesaplama = 1 ;
     if(a <= 1)

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+// 1 ile 100 arasi sayilari yazdirma programi
 int main()
 {
     int sayi,bilesen,j = 0,m = 0,armstrong = 0;
@@ -9,7 +9,8 @@ int main()
 
     printf("Armstrong sayilari bulma algoritmasi\n\n") ;
 
-    for( int i = 1,sayi = i;i < 1000;i++){
+    for( int i = 1;i < 1000;i++){
+        sayi = i ;
         m = 0 ;
         j = 0 ;
         armstrong = 0 ;

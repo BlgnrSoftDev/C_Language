@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//Girilen metinde kelime bulma algoritmasý...
 int main()
 {
     printf("****************************************************************************************************************\n\n");

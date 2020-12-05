@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Ortasý bos kare bastýrma programý......
+// Ortasi bos kare bastirma programi.....
 int main()
 {
     int son ;

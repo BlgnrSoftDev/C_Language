@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// fonskiyon kullanarak 1 den girilen sayiya kadaar toplama programi...
 int main()
 {
     int sayi ;
