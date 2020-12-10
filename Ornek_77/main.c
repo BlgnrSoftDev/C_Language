@@ -35,6 +35,7 @@ do{
     i++ ;
     j++ ;
     }
+    kontrol[i] = '\0' ;
     j = h ;
     if(strcmp(kontrol,b) == 0){
         konum[m] = j ;
