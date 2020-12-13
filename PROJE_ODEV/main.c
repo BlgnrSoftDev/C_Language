@@ -16,12 +16,12 @@ const char matrix_trigram_strings[10][4]={"the", "and", "ing", "ent", "ion", "de
 const float frequency_eng[20]={ 2.71, 2.33, 2.03, 1.78, 1.61, 1.13, 0.01, 0.01, 0.01, 0.01, 1.81, 0.73, 0.72, 0.42, 0.42, 0.01, 0.01, 0.01, 0.01, 0.01 };
 const float frequency_germ[20]={ 0.01, 0.89, 1.71, 3.90, 1.07, 3.61, 2.36, 2.31, 1.98, 1.98, 0.01, 0.01, 0.01, 0.01, 0.01, 1.04, 0.76, 0.75, 0.72, 0.62 };
 
-int main()
+int main(void)
 {
 
     char text[500];
 
-    printf("Please, enter the text :\t\n") ;
+    printf("Please, enter the text :\t\n\n\t") ;
     gets(text) ;
 
     filter_str(text) ;
@@ -29,7 +29,7 @@ int main()
     calculate_frequencies_tri(text) ;
     calculate_distances() ;
     detect_lang() ;
-
+    printf("\n\n\n--------------------------------------> Created By BlgnrSoftDev  ^_^ <--------------- \n\n\n") ;
     return 0;
 }
 
@@ -40,7 +40,7 @@ void filter_str(char str[]){
         ascii_control[s] = x ;
         s++;
     }
-    for(char y = 'a'; y < 'z';y++){
+    for(char y = 'a'; y <= 'z';y++){
         ascii_control[s] = y ;
         s++ ;
     }
@@ -59,6 +59,7 @@ void filter_str(char str[]){
 
     }
     printf("\n\n - -- - - - - -- - - - - -- - - -- - - - - -- - \n\n") ;
+    printf("This is filtered version of text :\n\n\t") ;
     puts(str) ;
 
 }
@@ -93,7 +94,7 @@ for(int i = 0,c = 0;i < 10;i++){
 }
 
 printf("\n\n - -- - - - - -- - - - - -- - - -- - - - - -- - \n\n") ;
-printf("The bigrams's frqeuencies :\n") ;
+printf("The bigrams's frqeuencies :\n\t\n") ;
 
 for(int i = 0;i < 10;i++){
    printf(" %.2f, ",calculated_frequencies[i]) ;
@@ -132,7 +133,7 @@ for(int i = 0,c = 0;i < 10;i++){
 
 }
 printf("\n\n - -- - - - - -- - - - - -- - - -- - - - - -- - \n\n") ;
-printf("The trigram's frequencies :\n") ;
+printf("The trigram's frequencies :\n\t\n") ;
 for(int i = 10;i < 20;i++){
    printf(" %.2f, ",calculated_frequencies[i]) ;
 }
@@ -150,8 +151,8 @@ void calculate_distances(){
     }
 
     distances[0] = sqrt(sum) ;
-    printf("\n The distances between english and this text :\n") ;
-    printf("===> %f",distances[0]) ;
+    printf("\n The distances between english and this text :\n\n") ;
+    printf("===> %f\n",distances[0]) ;
 
     sum = 0.0 ;
     for(int i = 0;i < 20;i++){
@@ -159,8 +160,8 @@ void calculate_distances(){
     }
 
     distances[1] = sqrt(sum) ;
-    printf("\n The distances between german and this text :\n") ;
-    printf("===> %f",distances[1]) ;
+    printf("\n The distances between german and this text :\n\n") ;
+    printf("===> %f\n",distances[1]) ;
 
 }
 
@@ -168,12 +169,12 @@ void calculate_distances(){
 void detect_lang(){
 
  printf("\n\n - -- - - - - -- - - - - -- - - -- - - - - -- - \n\n") ;
- printf("Total :\n") ;
+ printf("   Total :\n\n") ;
  if(distances[0] < distances[1]){
-    printf(" ===> This text's language is english.") ;
+    printf("===> This text's language is %s.",languages[0]) ;
  }
  else{
-    printf(" ===> This text's language is german.") ;
+    printf("===> This text's language is %s",languages[1]) ;
  }
 
 }
