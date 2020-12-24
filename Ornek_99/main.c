@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// void fonksiyon kullanarak pointer iÅŸlemleri...
 int main()
 {
     int engineer,programmer,cooker, raise ;
-    printf("sýrasýyla birer bosluk býrakarak asci,programci,muhendis maasi ve zam orani giriniz giriniz");
+    printf("sirasiyla birer bosluk birakarak asci,programci,muhendis maasi ve zam orani giriniz giriniz");
     scanf("%d %d %d %d",&cooker,&engineer,&programmer,&raise) ;
     maashesapla(&cooker,&programmer,&engineer,raise);
     printf("asci = %d, programmer = %d, engineer = %d", cooker , engineer , programmer) ;
