@@ -1,81 +1,49 @@
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
-int i,j,k,a,b;
-float tem;
-int main()
+#include<string.h>
+#include<stdlib.h>
+
+/* Girilen bir karakter dizisinin istenilen pozisyondan itibaren
+istenilen karakter sayýsý kadar kopyalanmasýný saðlayan C
+programi v_2 */
+
+char *SubString(char *dizikopya, int pozisyon, int uzunluk) ;
+
+int main(void)
 {
-	int row,col;
-	float mat[80][80];
-	printf("************************************************\n");
-	printf("Convert any mxn matrix into Row Echelon Form\n");
+    char text[100] ;
+    int position, len ;
 
-	printf("Enter the number of rows : ");
-	scanf("%d",&row);
-	printf("Enter the number of columns : ");
-	scanf("%d",&col);
+    printf("Enter Text :\t") ;
+    gets(text) ;
 
-	// Taking Inputs
-	for(i=0;i<row;i++)
-	{
-		for(j=0;j<col;j++)
-		{
-			printf("Enter the %d,%d element : ",i+1,j+1);
-			scanf("%f",&mat[i][j]);
-		}
-	}
+    printf("\nDizinin kopyalama isleminin baslangic pozisyonunu giriniz :\t") ;
+    scanf("%d",&position) ;
 
-	printf("Your Matrix is :: \n");
-	for(i=0;i<row;i++)
-	{
-		for(j=0;j<col;j++)
-		{
-			printf("%.1f\t",mat[i][j]);
-		}
-		printf("\n");
-	}
-	// Program Logic
-	for(k=0;k<row;k++)
-	{
+    printf("\nKopyalanacak karakter sayisini giriniz :\t") ;
+    scanf("%d",&len) ;
 
-		if( (mat[k][k]) != 1)
-		{
-			float temp = mat[k][k];
-			if(temp == 0)
-				continue; // Avoiding division by zero
-			for(j=0;j<col;j++)
-			{
-				mat[k][j] = ( (mat[k][j]) / temp );
-			}
-		}
+    char *text2 = (char *) calloc(strlen(text) + 1, sizeof(char)) ;
+    strcpy(text2, text) ;
+    char *total = SubString(text2, position, len) ;
 
-		for(i=k+1;i<row;i++)
-		{
-			tem = mat[i][k];
-			for(j=k;j<col;j++)
-				{
+    printf("\n\n Total ;\n\n ==> ") ;
+    puts(total) ;
+    free(text2) ;
 
-					mat[i][j] = mat[i][j] - ( mat[k][j] * tem );
-				}
+}
 
-		}
+char *SubString(char *dizikopya, int pozisyon, int uzunluk)
+{
+    char *temp = (char *) malloc(sizeof(char) * uzunluk) ;
 
-		// Printing Each Step
-		printf("\n**************************\n");
-		if(k==row-1)
-			printf("Row Echelon form is : \n\n");
-		else
-			printf("Step %d\n\n",k+1);
-		for(a=0;a<row;a++)
-		{
-			for(b=0;b<col;b++)
-			{
-				if(mat[a][b] == -0)
-					mat[a][b] = 0; // Simply converting'-0' into '0'
-				printf("%.1f\t",mat[a][b]);
-			}
-			printf("\n");
-		}
-	}
-    return 0 ;
+    for(int i = 0, n = pozisyon - 1; i < uzunluk; ++i, ++n)
+    {
+        *(temp +  i) = *(dizikopya + n) ;
+    }
+
+    strcpy(dizikopya, temp) ;
+
+    dizikopya = (char*) realloc(dizikopya, sizeof(char)* uzunluk) ;
+
+    return dizikopya ;
 }
