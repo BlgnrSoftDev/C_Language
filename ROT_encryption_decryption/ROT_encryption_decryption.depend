@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1612997828 source:c:\users\hüseyin\desktop\cdersleri\c_language_tutorial\rot_encryption_decryption\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<string.h>
+

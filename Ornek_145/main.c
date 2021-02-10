@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// pointer alýstýrmalarý...
+
 void findvariable(int* pointer );
 void findpointer(int variable);
 
