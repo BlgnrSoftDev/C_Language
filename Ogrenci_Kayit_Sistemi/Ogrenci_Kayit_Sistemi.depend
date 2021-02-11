@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1613081282 source:c:\users\hüseyin\desktop\cdersleri\c_language_tutorial\ogrenci_kayit_sistemi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

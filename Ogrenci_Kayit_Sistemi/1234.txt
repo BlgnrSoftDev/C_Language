@@ -1,0 +1,9 @@
+-------------------------------
+
+==> Adi : $erol?
+==> Soyadi : $bulut?
+==> Sinifi : $1.sinif?
+==> Yas : $48?
+==> Cinsiyet : $erkek?
+==> Disiplin Kaydi : $sçmarçk?
+-------------------------------
